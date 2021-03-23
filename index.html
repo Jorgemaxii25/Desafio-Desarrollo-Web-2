@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafío Desarrollo Web II</title>
+    <link rel="icon" href="https://desafio-desarollo-web-2.vercel.app/img/favicon.png">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header__img">
+        <button id="BotonReproducir"></button>
+      </div>
+      <div class="header__menu">
+        <div class="header__menu-boton boton-1">
+          <a href="#Lo-mas-Jugado">Lo más Jugado</a>
+        </div>
+        <div class="header__menu-boton boton-2">
+          <a href="#Recomendados">Recomendados</a>
+        </div>
+      </div>
+    </header>
+    <div class="Portada">
+      <div class="Portada__Text">
+        <p>Guía</p>
+        <p id="Portada__Text-Color">gaming</p>
+        <p>2021</p>
+      </div>
+      <div class="Portada__img">
+        <img src="img/header_img.png" alt="Logo" />
+      </div>
+    </div>
+    <div class="Contenido-Medio">
+      <div class="Contenido">
+        <div class="Contenido__Titulo">
+          <h2 class="Contenido__Titulo" id="Lo-mas-Jugado">Lo más Jugado</h2>
+        </div>
+        <div class="Contenido__separador">
+          <div class="Contenido__separador-Img">
+            <img src="img/solar-ash.png" alt="solar-ash-image" />
+          </div>
+          <div class="Contenido__separador-Texto">
+            <p>
+              Solar Ash es el juego de Heart Machine, el estudio dirigido por el
+              director Alx Preston y los creadores del galardonado juego de 2016
+              Hyper Light Drifter. <br />
+              <br />
+              Los jugadores encontrarán un mundo surrealista, vivido y muy
+              estilizado repleto de alta velocidad y personajes estrañables y
+              tremendos encuentros con enemigos. El vacío llama...
+            </p>
+            <div class="Contenido__separador-Texto-Boton">
+              <a href="https://www.epicgames.com/store/es-MX/p/solar-ash-kingdom" target="_blank">Ir al Juego</a>
+            </div>
+          </div>
+        </div>
+        <hr class="Contenido-Tarjetas" />
+      </div>
+    </div>
+    <div class="Contenido-Medio">
+      <div class="Tarjetas">
+        <h2 id="Recomendados">Recomendados</h2>
+        <div id="Tarjetas__Contenido">
+          <div class="Tarjetas__Contenido">
+            <div class="Tarjetas__Contenido-Img">
+              <img src="img/lol.png" alt="League-Of-legends-img" />
+            </div>
+            <h2>League Of legends</h2>
+            <p class="Tarjetas__Contenido-Texto">
+              League of Legends es un videojuego del género multijugador de
+              arena de batalla en linea y deporte electrónico el cual fue
+              desarrollado por Riot Games.
+            </p>
+            <div class="Tarjetas__Contenido-Boton Boton-1">
+              <a href="https://na.leagueoflegends.com/en-us/" target="_blank">Ir al Juego</a>
+            </div>
+          </div>
+          <div class="Tarjetas__Contenido Tarjeta-Especial">
+            <div class="Tarjetas__Contenido-Img">
+              <img src="img/among_us.png" alt="Among-Us-img" />
+            </div>
+            <div class="Tarjetas__Contenido-Trending">
+              <p>TRENDING</p>
+            </div>
+            <h2>Among Us</h2>
+            <p class="Tarjetas__Contenido-Texto">
+              Among Us es un videojuego que tiene un grupo de jugadores a bordo
+              de una nave espacial, cada uno de los cuales asume uno de los dos
+              roles: compañeros o impostores.
+            </p>
+            <div class="Tarjetas__Contenido-Boton Boton-2">
+              <a href="https://store.steampowered.com/app/945360/Among_Us/" target="_blank">Ir al Juego</a>
+            </div>
+          </div>
+          <div class="Tarjetas__Contenido Tarjeta-Especial">
+            <div class="Tarjetas__Contenido-Img">
+              <img src="img/brawhalla.png" alt="Brawlhalla-img" />
+            </div>
+            <h2>Brawlhalla</h2>
+            <p class="Tarjetas__Contenido-Texto">
+              Brawlhalla es un videojuego gratuito de lucha desarrolado por Blue
+              Mammoth Games y publicado por Ubisoft para múltiples plataformas y
+              sistemas operativos.
+            </p>
+            <div class="Tarjetas__Contenido-Boton Boton-3">
+              <a href="https://store.steampowered.com/app/291550/Brawlhalla/" target="_blank">Ir al Juego</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-contenedor">
+        <div class="footer__Contenido">
+          <img src="img/Logo-Footer.png" alt="Logo" />
+          <p>Gamer +</p>
+        </div>
+        <div class="footer__Suscripcion">
+          <p>Suscribite a las novedades</p>
+          <form method="post">
+            <input
+              type="email"
+              placeholder="Ingresá tu mail"
+              required
+              id="footer__Suscripcion-Mail"
+            />
+            <input type="submit" id="footer__Suscripcion-Boton" />
+          </form>
+        </div>
+      </div>
+    </footer>
+    <audio src="cancion.mp3" muted autoplay loop="loop"></audio>
+    <script>
+
+      var pulsado = 0;
+
+      const cargarSonido = function (fuente) {
+          const sonido = document.createElement("audio");
+          sonido.src = fuente;
+          sonido.setAttribute("preload", "auto");
+          sonido.setAttribute("controls", "none");
+          sonido.setAttribute("loop", "loop");
+          sonido.style.display = "none";
+          document.body.appendChild(sonido);
+          return sonido;
+      };
+      const $botonReproducir = document.querySelector("#BotonReproducir")
+      const sonido = cargarSonido("cancion.mp3");
+      $botonReproducir.onclick = () => {
+          if (pulsado == 1) {
+            pulsado = 0;
+            sonido.pause();
+          }
+          else if (pulsado == 0){
+            pulsado = 1;
+            sonido.play();
+          }
+      };
+
+      // no es codigo totalmente propio
+
+      </script>
+  </body>
+</html>
+
+<!-- Jorge Peñaranda -->
